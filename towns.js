@@ -1,7 +1,13 @@
 $(document).ready(function() {
 	$('#btnDelete').click(deleteTown)
+<<<<<<< HEAD
 	$('#btnShuffle').click(shuffleTowns);
+=======
+	$('#btnAdd').click(addTown);
+>>>>>>> dd753b227b30d90cf5aa0283566bfaeecc88c542
 });
+
+
 
 function deleteTown() {
 	let townName = $('#townName').val();
@@ -19,6 +25,7 @@ function deleteTown() {
 		$('#result').text(townName + " not found.");
 }
 
+<<<<<<< HEAD
 function shuffleTowns() {
 	let towns = $('#towns option').toArray();
 	$('#towns').empty();
@@ -35,3 +42,12 @@ function shuffleTowns() {
 		}
 	}
 }
+=======
+function addTown() {
+	let townName = $('#townNameForAdd').val();
+	$('#townNameForAdd').val('');
+	$('#towns').append($('<option>').text(townName));
+	$('#result').text(townName + " added.");
+}
+
+>>>>>>> dd753b227b30d90cf5aa0283566bfaeecc88c542
